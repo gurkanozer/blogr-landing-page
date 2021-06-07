@@ -1,0 +1,28 @@
+/**FONTS**/
+$fontUbuntu: 'Ubuntu',
+sans-serif;
+$fontOverpass:'Overpass',
+sans-serif;
+
+/***SCREEN SIZES**/
+
+$smScreen: 576px;
+$mdScreen: 768px;
+$lgScreen: 992px;
+
+/****COLORS***/
+
+$color-red-light: hsl(355, 100%, 74%);
+$color-red:hsl(356, 100%, 66%);
+$color-blue:hsl(208, 49%, 24%);
+
+$color-white:hsl(0, 0%, 100%);
+$color-smoke: hsl(0, 8%, 95%); //Text color
+$color-gray:hsl(240, 2%, 79%);
+$color-gray-dark:hsl(207, 13%, 34%);
+$color-black:hsl(240, 10%, 16%);
+
+$color-gradient-red:linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+$color-gradient-blue:linear-gradient(to right, hsl(237, 23%, 32%), hsl(237, 17%, 21%));
+
+/***FONT WEIGHTS**/

@@ -1,0 +1,73 @@
+.laptop {
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+
+    .image {
+        .image-desktop {
+            display: none;
+        }
+
+        .image-mobile {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .content {
+        width: 100%;
+        text-align: center;
+        padding: 0 2rem;
+
+        &__title {
+            color: $color-blue;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        &__text {
+            color: $color-gray-dark;
+            font-size: 0.94rem;
+            line-height: 1.6;
+            margin-bottom: 3rem;
+        }
+    }
+}
+
+@media screen and (min-width:$lgScreen) {
+    .laptop {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        margin-top: 20rem;
+
+        .image {
+            position: relative;
+
+            .image-desktop {
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+                transform: translate(-30%, -55%);
+            }
+
+            .image-mobile {
+                display: none;
+            }
+        }
+
+        .content {
+            text-align: left;
+            width: 90%;
+
+            &__title {
+                font-size: 1.8rem;
+            }
+
+            &__text {
+                margin-bottom: 4rem;
+            }
+        }
+    }
+}
