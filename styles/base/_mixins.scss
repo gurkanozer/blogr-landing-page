@@ -1,0 +1,20 @@
+@function rem($size) {
+    $remSize: $size / 16;
+    @return #{$remSize}rem;
+}
+
+
+@mixin mq($size, $to:true) {
+    @if $to {
+        @media screen and(min-width:$size) {
+            @content;
+        }
+
+    }
+
+    @else {
+        @media screen and(max-width:$size) {
+            @content;
+        }
+    }
+}

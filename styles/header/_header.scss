@@ -1,24 +1,15 @@
 header {
-    width: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 999;
-}
-
-.header__container {
-    max-width: 65.625rem;
     width: 100%;
-    margin: 3.2rem auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 1.4rem;
 }
 
 .header__brand {
     img {
-        height: 1.8rem;
+        width: auto;
+        height: rem(32);
+
     }
 }
 
@@ -33,48 +24,17 @@ header {
     &.active {
         background: url("../../images/icon-close.svg") no-repeat center center;
     }
-}
 
-
-@media screen and (min-width:768px) {
-    .header__container {
-        padding: 0 1rem;
-        margin: 1rem auto;
-    }
-
-    .header__toggle-btn {
+    @include mq($md-screen) {
         display: none;
     }
-
-    .header__brand {
-        img {
-            height: 2.4rem;
-        }
-    }
 }
 
-
-header.scrolled {
-    position: fixed;
-    background-color: $color-red;
-    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.216);
-
-    .header__container {
-        margin: 0 auto;
-        padding: 1rem;
-    }
-
-    @media screen and (min-width:$mdScreen) {
-        .header__container {
-            .header__brand {
-                img {
-                    height: 1.2rem;
-                }
-            }
-        }
-
-        .navbar {
-            padding: 0;
-        }
-    }
+.header__container {
+    max-width: $max-size;
+    margin: rem(56) auto 0;
+    display: flex;
+    padding: 0 1.5rem;
+    align-items: center;
+    justify-content: space-between;
 }

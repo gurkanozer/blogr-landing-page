@@ -1,56 +1,60 @@
 .intro {
     width: 100%;
-    background: url("../../images/bg-pattern-intro.svg") no-repeat, $color-gradient-red;
-    background-position: 25% 50%;
+    height: rem(600);
+    background: url("../images/bg-pattern-intro.svg") no-repeat center center, $color-cta-text;
     border-bottom-left-radius: 6rem;
-
-    &__title {
-        font-size: 2rem;
-        color: $color-white;
-        text-align: center;
-        padding: 0.5rem;
-    }
-
-    &__text {
-        color: $color-white;
-        padding: 0.5rem 1rem;
-        opacity: 0.8;
-        text-align: center;
-    }
-
-    &__btns {
-        padding: 2rem 1rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-    }
 }
 
 .intro__container {
-    padding: 1rem;
-    padding-top: 11rem;
-    padding-bottom: 6rem;
-}
+    max-width: $max-size;
+    margin: 0 auto;
+    height: 100%;
+    text-align: center;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: $font-primary;
+    color: $color-text;
 
-@media screen and (min-width:$mdScreen) {
-    .intro {
-        &__title {
-            font-size: 3.4rem;
-        }
-
-        &__text {
-            font-size: 1.2rem;
-        }
-
-        &__btns {
-            justify-content: center;
-            gap: 1rem;
-        }
+    .intro__title {
+        font-size: rem(34);
+        margin-bottom: rem(22);
+        line-height: 1.4;
     }
 
+    .intro__text {
+        font-size: rem(18);
+        margin-bottom: rem(48);
+    }
+
+    .intro__btns {
+        .btn {
+            margin-right: 1rem;
+        }
+    }
+}
+
+@include mq($sm-screen) {
     .intro__container {
-        margin: 0;
-        padding-top: 12rem;
-        padding-bottom: 6rem;
+        padding-top: rem(112);
+
+        .intro__title {
+            font-size: rem(48);
+        }
+    }
+}
+
+@include mq($md-screen) {
+    .intro__container {
+        .intro__title {
+            font-size: rem(59);
+        }
+
+        .intro__text {
+            font-size: rem(20);
+            font-weight: $fw-regular;
+        }
     }
 }

@@ -1,0 +1,57 @@
+:root {
+    font-size: 1rem;
+    font-family: $font-primary;
+}
+
+*,
+*::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/***BUTTONS*/
+
+.btn {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: 2rem;
+    font-weight: $fw-bold;
+}
+
+.btn-primary {
+    background: $color-text;
+    color: $color-cta-text;
+
+    &:hover {
+        background: $color-cta-hover-bg;
+        color: $color-text;
+    }
+}
+
+.btn-secondary {
+    border: 1px solid $color-text;
+    color: $color-text;
+    background: transparent;
+    padding: 1rem rem(26);
+
+    &:hover {
+        background: $color-text;
+        color: $color-cta-hover-bg;
+    }
+}

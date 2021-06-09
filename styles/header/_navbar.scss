@@ -1,80 +1,75 @@
 .navbar {
     position: absolute;
-    top: 7rem;
-    left: 0;
-    max-height: calc(100vh - 8rem);
+    top: rem(124);
     width: calc(100% - 3rem);
-    background: $color-white;
-    border-radius: 4px;
-    margin: 0 1.5rem;
-    padding: 2rem 1rem;
-    overflow: auto;
+    background: $color-text;
+    margin: 0 auto;
+    border-radius: 0.5rem;
     box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.216);
-    text-align: center;
+    overflow: auto;
     display: none;
 
     &.active {
         display: block;
     }
+}
 
-    &__nav {
-        width: 100%;
+.navbar__nav {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
 
-        .nav-item {
-            padding: 0.5rem;
-
-            .nav-link {
-                cursor: pointer;
-                color: $color-black;
-                font-weight: 600;
-
-            }
-        }
+    .nav-item {
+        margin: 1rem;
+        text-align: center;
+        color: $color-headings;
     }
 
-    &__nav-account {
-        margin: 1rem 0.5rem;
-        padding: 1rem 0;
-        border-top: 1px solid $color-gray;
+    .nav-link {
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: $fw-bold;
+    }
+}
 
-        li {
-            padding: 1rem;
-            text-align: center;
-            font-weight: 700;
-        }
+.navbar__nav-account {
+    margin: 1rem;
+    padding: 1.5rem 0;
+    border-top: 1px solid $color-footer-text;
 
-        .login {
-            color: $color-gray-dark;
-        }
+    li {
+        text-align: center;
+        font-weight: $fw-bold;
+        line-height: 3rem;
+    }
 
-        .signup {
-            padding: 0.8rem 2rem;
-            border-radius: 2rem;
-            background: $color-gradient-red;
-            color: $color-white;
+    .login {
+        color: $color-headings;
+    }
 
-            &:hover {
-                background: $color-red-light;
-                color: $color-white;
-            }
-        }
+    .signup {
+
+        background: $gradient-intro;
+        color: $color-text;
+        padding: 1rem 2rem;
+        border-radius: 2rem;
     }
 }
 
 .dropdown {
     width: 100%;
+    background: $color-dropdown-bg;
     margin-top: 1rem;
     padding: 1rem;
-    background: $color-smoke;
-    border-radius: 4px;
     display: none;
 
     li {
         padding: 0.5rem;
+        color: $color-footer-bg;
 
         a {
-            font-size: 0.9rem;
-            color: $color-gray-dark;
+            color: inherit;
+            font-weight: $fw-semi-bold;
         }
     }
 
@@ -83,12 +78,8 @@
     }
 }
 
+@include mq($md-screen) {
 
-@media screen and (min-width:$mdScreen) {
-
-    // header {
-    //     background: $color-black;
-    // }
     .navbar,
     .navbar.active {
         display: flex;
@@ -101,25 +92,22 @@
         align-items: center;
         justify-content: space-between;
         box-shadow: none;
-        padding: 3rem 0;
-        margin: 0;
         overflow: visible;
         text-align: left;
+
     }
 
     .navbar__nav,
     .navbar__nav-account {
-        padding: 0;
-        margin: 0;
-        width: auto;
         display: flex;
         border: none;
-
+        width: auto;
     }
 
     .navbar__nav {
-        padding-left: 3rem;
         position: relative;
+        padding: 0;
+        margin: 0 1rem;
 
         .nav-item {
             margin-right: 1.5rem;
@@ -128,9 +116,8 @@
                 margin-right: 0;
             }
 
-
             .nav-link {
-                color: $color-white;
+                color: $color-text;
                 opacity: 0.8;
 
                 &:hover {
@@ -139,31 +126,37 @@
 
             }
         }
-
     }
 
     .navbar__nav-account {
         li {
             padding: 0;
             padding-left: 2rem;
-        }
 
-        .login {
-            color: $color-white;
-            opacity: 0.8;
-        }
+            .login {
+                color: $color-text;
+            }
 
-        .signup {
-            background: $color-white;
-            color: $color-red;
+            .signup {
+                background: $color-text;
+                color: $color-cta-text;
+
+                &:hover {
+                    background: $color-cta-hover-bg;
+                    color: $color-text;
+                }
+            }
+
         }
     }
 
     .dropdown {
         position: absolute;
-        background: $color-white;
+        background: $color-text;
+        text-align: left;
         min-width: 10rem;
         width: auto;
+        border-radius: 0.5rem;
         box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.216);
     }
 }

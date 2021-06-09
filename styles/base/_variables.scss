@@ -1,0 +1,32 @@
+/**SCREEN SIZES*/
+
+$sm-screen: 576px;
+$md-screen:768px;
+$lg-screen:992px;
+
+$max-size:rem(1164);
+
+/**COLORS*/
+$color-cta-text: hsl(356, 100%, 66%);
+$color-cta-hover-bg: hsl(355, 100%, 74%);
+$color-headings:hsl(208, 49%, 24%);
+$color-text:hsl(0, 0%, 100%);
+$color-dropdown-bg:hsl(0, 0%, 93%);
+$color-footer-text:hsl(240, 2%, 79%);
+$color-body-copy:hsl(207, 13%, 34%);
+$color-footer-bg:hsl(240, 10%, 16%);
+
+$gradient-intro: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+$gradient-body: linear-gradient(to right, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+
+/**FONTS*/
+$font-primary: 'Overpass',
+sans-serif;
+$font-secondary:'Ubuntu',
+sans-serif;
+
+$fw-light: 300;
+$fw-regular:400;
+$fw-medium:500;
+$fw-semi-bold:600;
+$fw-bold:700;

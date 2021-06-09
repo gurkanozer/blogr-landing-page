@@ -1,34 +1,42 @@
 footer {
     width: 100%;
-    background-color: $color-black;
-    border-top-right-radius: 6rem;
-    margin-top: 4rem;
+    background-color: $color-footer-bg;
 }
 
-.footer-container {
-    max-width: 65.625rem;
+.footer__brand {
+    height: rem(30);
+    margin-bottom: rem(88);
+
+    img {
+        width: auto;
+    }
+}
+
+.footer__container {
+    max-width: $max-size;
     margin: 0 auto;
-    padding: 4rem 1rem;
+    padding: 1rem;
+    padding-top: rem(74);
     display: grid;
     grid-template-columns: 1fr;
     text-align: center;
 
     .nav {
-        margin-top: 4rem;
+        margin-bottom: rem(50);
 
-        .nav-item {
+        &__item {
             font-size: 1rem;
-            padding: 0.4rem 0;
-            color: $color-gray;
+            padding: 0.4rem;
+            color: $color-footer-text;
 
             &:first-child {
-                color: $color-white;
-                margin-bottom: 1rem;
-                font-weight: 600;
+                color: $color-text;
+                margin-bottom: 2rem;
+                ;
             }
         }
 
-        .nav-link {
+        &__link {
             color: inherit;
 
             &:hover {
@@ -38,25 +46,21 @@ footer {
     }
 }
 
-@media screen and (min-width:$smScreen) {
+@include mq($sm-screen) {
     footer {
-        margin-top: 13rem;
-
+        margin-top: rem(70);
     }
 
-    .footer-container {
+    .footer__container {
         grid-template-columns: repeat(2, 1fr);
-        text-align: left;
 
-        .nav {
-            margin-top: 0;
-            margin-bottom: 3rem;
-        }
     }
 }
 
-@media screen and (min-width:$lgScreen) {
-    .footer-container {
+@include mq($md-screen) {
+    .footer__container {
+        text-align: left;
         grid-template-columns: repeat(4, 1fr);
+
     }
 }

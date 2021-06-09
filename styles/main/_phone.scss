@@ -1,0 +1,74 @@
+.phone {
+    width: 100%;
+    background-color: hsl(237, 23%, 32%);
+    border-top-right-radius: 6rem;
+    border-bottom-left-radius: 6rem;
+    margin-top: rem(176);
+}
+
+.phone__container {
+    max-width: $max-size;
+    width: 100%;
+    margin: 0 auto;
+
+    .image {
+
+        img {
+            transform: translateY(rem(-172));
+        }
+    }
+
+    .content {
+        margin-top: rem(-172);
+        padding-bottom: rem(122);
+        text-align: center;
+        color: $color-text;
+
+        &__title {
+            font-size: rem(38);
+        }
+
+        &__text {
+            padding: 1rem 2.5rem 0;
+            line-height: 1.8;
+        }
+    }
+}
+
+@include mq($lg-screen) {
+    .phone {}
+
+    .phone__container {
+        display: flex;
+        align-items: center;
+
+        .image {
+            max-height: rem(402);
+
+            img {
+                width: auto;
+                object-fit: contain;
+                transform: translateY(-10%);
+            }
+        }
+
+        .content {
+            margin: 0;
+            padding: 0;
+            width: 50%;
+            text-align: left;
+
+            &__title {
+                font-size: rem(38);
+                font-weight: $fw-bold;
+                letter-spacing: 0.1px;
+                padding-left: 2.5rem;
+            }
+
+            &__text {
+                padding: 1rem 2.5rem 0;
+                line-height: 1.8;
+            }
+        }
+    }
+}

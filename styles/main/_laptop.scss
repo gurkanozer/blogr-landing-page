@@ -1,72 +1,101 @@
 .laptop {
-    margin-top: 10rem;
-    display: flex;
-    flex-direction: column;
+    width: 100%;
+    padding: 0 1.5rem;
+    padding-top: rem(104);
+    overflow: hidden;
+}
 
-    .image {
-        .image-desktop {
-            display: none;
-        }
+.laptop__title {
+    font-size: rem(26);
+    font-weight: $fw-semi-bold;
+    text-align: center;
+    color: $color-headings;
+    margin-bottom: rem(52);
+}
 
-        .image-mobile {
-            width: 100%;
-            object-fit: cover;
-        }
-    }
+.laptop__container {
+    max-width: $max-size;
+    margin: 0 auto;
 
     .content {
-        width: 100%;
+        margin-top: rem(56);
         text-align: center;
-        padding: 0 2rem;
+        padding: 1rem;
 
         &__title {
-            color: $color-blue;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
+            font-size: rem(26);
+            color: $color-headings;
         }
 
         &__text {
-            color: $color-gray-dark;
-            font-size: 0.94rem;
-            line-height: 1.6;
-            margin-bottom: 3rem;
+            margin-top: 1.5rem;
+            margin-bottom: rem(56);
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+    }
+
+    .image {
+
+        &__desktop {
+            display: none;
         }
     }
 }
 
-@media screen and (min-width:$lgScreen) {
+@include mq($md-screen) {
     .laptop {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-        margin-top: 20rem;
+        padding-top: rem(154);
+        padding-bottom: rem(200);
+    }
 
-        .image {
-            position: relative;
+    .laptop__container {
+        display: flex;
+        flex-direction: row;
+        position: relative;
 
-            .image-desktop {
-                position: absolute;
-                top: 0;
-                left: 0;
-                display: block;
-                transform: translate(-30%, -55%);
-            }
+        .content {
+            max-width: rem(570);
+            margin-top: 0rem;
+            padding: 0;
+            text-align: left;
+            z-index: 1;
+            background-color: rgba(255, 255, 255, 0.7);
 
-            .image-mobile {
-                display: none;
+            &__text {
+                letter-spacing: 1px;
             }
         }
 
-        .content {
-            text-align: left;
-            width: 90%;
+        .image {
+            height: 100%;
+            width: 100%;
 
-            &__title {
-                font-size: 1.8rem;
+            &__mobile {
+                display: none;
             }
 
-            &__text {
-                margin-bottom: 4rem;
+            &__desktop {
+                position: absolute;
+                object-fit: cover;
+                bottom: -10%;
+                left: -35%;
+                display: block;
+                width: 80%;
+            }
+        }
+    }
+}
+
+@include mq($lg-screen) {
+    .laptop {}
+
+    .laptop__container {
+        padding-top: rem(164);
+
+        .image {
+            &__desktop {
+                bottom: -25%;
             }
         }
     }
