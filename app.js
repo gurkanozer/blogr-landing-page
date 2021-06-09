@@ -9,6 +9,9 @@ const clearDropdownActive = () => {
     dropdownItems.forEach(di => {
         di.classList.remove("active");
     });
+    dropdownToggles.forEach(dt => {
+        dt.classList.remove("active");
+    })
 }
 
 navToggle.addEventListener("click", () => {
@@ -21,9 +24,15 @@ dropdownToggles.forEach(dropdownToggle => {
         e.preventDefault();
         const activeItem = dropdownToggle.parentElement.querySelector(".dropdown");
         let activeItemKeeper = activeItem.classList.contains("active")
+        let isArrowUp = dropdownToggle.classList.contains("active");
         clearDropdownActive();
         if (!activeItemKeeper)
             activeItem.classList.add("active");
+        if (isArrowUp)
+            dropdownToggle.classList.remove("active");
+        else
+            dropdownToggle.classList.add("active");
+
     });
 });
 
@@ -34,6 +43,8 @@ window.addEventListener("mouseup", (e) => {
             inside = false
         else inside = true
     });
-    if (!inside)
+    if (!inside) {
+
         clearDropdownActive();
+    }
 });
