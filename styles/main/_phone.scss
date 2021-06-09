@@ -36,7 +36,9 @@
 }
 
 @include mq($lg-screen) {
-    .phone {}
+    .phone {
+        margin-top: rem(116);
+    }
 
     .phone__container {
         display: flex;
