@@ -38,3 +38,10 @@ header {
     align-items: center;
     justify-content: space-between;
 }
+
+@include mq($md-screen) {
+    .header__container {
+        margin: rem(28) auto 0;
+
+    }
+}
