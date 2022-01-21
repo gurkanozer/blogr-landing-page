@@ -15,14 +15,14 @@ header {
 
 .header__toggle-btn {
     border: none;
-    background: url('../../images/icon-hamburger.svg') no-repeat center center;
+    background: url('../images/icon-hamburger.svg') no-repeat center center;
     outline: none;
     cursor: pointer;
     width: 2.2rem;
     height: 2.2rem;
 
     &.active {
-        background: url('../../images/icon-close.svg') no-repeat center center;
+        background: url('../images/icon-close.svg') no-repeat center center;
     }
 
     @include mq($md-screen) {
