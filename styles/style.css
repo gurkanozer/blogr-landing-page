@@ -77,7 +77,7 @@ header {
 
 .header__toggle-btn {
   border: none;
-  background: url("../images/icon-hamburger.svg") no-repeat center center;
+  background: url("../../images/icon-hamburger.svg") no-repeat center center;
   outline: none;
   cursor: pointer;
   width: 2.2rem;
@@ -85,7 +85,7 @@ header {
 }
 
 .header__toggle-btn.active {
-  background: url("../images/icon-close.svg") no-repeat center center;
+  background: url("../../images/icon-close.svg") no-repeat center center;
 }
 
 @media screen and (min-width: 768px) {
@@ -152,7 +152,7 @@ header {
 }
 
 .navbar__nav .nav-link.toggle-dropdown::after {
-  content: url("../images/icon-arrow-dark.svg");
+  content: url("../../images/icon-arrow-dark.svg");
   position: absolute;
   top: 0;
   right: -1rem;
@@ -258,7 +258,7 @@ header {
     text-decoration: underline;
   }
   .navbar__nav .nav-item .nav-link.toggle-dropdown::after {
-    content: url("../images/icon-arrow-light.svg");
+    content: url("../../images/icon-arrow-light.svg");
   }
   .navbar__nav-account li {
     padding: 0;
