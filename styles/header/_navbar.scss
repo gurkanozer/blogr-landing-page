@@ -32,7 +32,7 @@
         position: relative;
 
         &.toggle-dropdown::after {
-            content: url('../../images/icon-arrow-dark.svg');
+            content: url('../images/icon-arrow-dark.svg');
             position: absolute;
             top: 0;
             right: -1rem;
@@ -137,7 +137,7 @@
                 }
 
                 &.toggle-dropdown::after {
-                    content: url('../../images/icon-arrow-light.svg');
+                    content: url('../images/icon-arrow-light.svg');
                 }
             }
         }
